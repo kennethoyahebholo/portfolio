@@ -1,80 +1,80 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import Skills from "./Skills"
-import HtmlLogo from "../../public/svg/icons8-html-5.svg"
-import CssLogo from "../../public/svg/icons8-css3.svg"
-import JavascriptLogo from "../../public/svg/javascript.svg"
-import TypescriptLogo from "../../public/svg/icons8-typescript.svg"
-import ReactLogo from "../../public/svg/icons8-react.svg"
-import TailwindLogo from "../../public/svg/icons8-tailwindcss.svg"
-import SassLogo from "../../public/svg/icons8-sass-avatar.svg"
-import GitLogo from "../../public/svg/icons8-git.svg"
-import FireBaseLogo from "../../public/svg/icons8-firebase.svg"
-import AwsLogo from "../../public/svg/icons8-amazon-web-services.svg"
-import NodeJsLogo from "../../public/svg/icons8-node-js.svg"
-import JiraLogo from "../../public/svg/icons8-jira.svg"
+// import HtmlLogo from "../../public/svg/icons8-html-5.svg"
+// import CssLogo from "../../public/svg/icons8-css3.svg"
+// import JavascriptLogo from "../../public/svg/javascript.svg"
+// import TypescriptLogo from "../../public/svg/icons8-typescript.svg"
+// import ReactLogo from "../../public/svg/icons8-react.svg"
+// import TailwindLogo from "../../public/svg/icons8-tailwindcss.svg"
+// import SassLogo from "../../public/svg/icons8-sass-avatar.svg"
+// import GitLogo from "../../public/svg/icons8-git.svg"
+// import FireBaseLogo from "../../public/svg/icons8-firebase.svg"
+// import AwsLogo from "../../public/svg/icons8-amazon-web-services.svg"
+// import NodeJsLogo from "../../public/svg/icons8-node-js.svg"
+// import JiraLogo from "../../public/svg/icons8-jira.svg"
 
 type Props = {}
 
 const codingSkills = [
   {
     id: 1,
-    LanguageLogo: HtmlLogo,
+    LanguageLogo: "",
     percentage: "80%"
   },
   {
     id: 2,
-    LanguageLogo: CssLogo,
+    LanguageLogo: "",
     percentage: "70%"
   },
   {
     id: 3,
-    LanguageLogo: JavascriptLogo,
+    LanguageLogo: "",
     percentage: "50%"
   },
   {
     id: 4,
-    LanguageLogo: TypescriptLogo,
+    LanguageLogo: "",
     percentage: "50%"
   },
   {
     id: 5,
-    LanguageLogo: ReactLogo,
+    LanguageLogo: "",
     percentage: "70%"
   },
   {
     id: 5,
-    LanguageLogo: TailwindLogo,
+    LanguageLogo: "",
     percentage: "60%"
   },
   {
     id: 5,
-    LanguageLogo: SassLogo,
+    LanguageLogo: "",
     percentage: "60%"
   },
   {
     id: 6,
-    LanguageLogo: GitLogo,
+    LanguageLogo: "",
     percentage: "70%"
   },
   {
     id: 7,
-    LanguageLogo: FireBaseLogo,
+    LanguageLogo: "",
     percentage: "60%"
   },
   {
     id: 8,
-    LanguageLogo: JiraLogo,
+    LanguageLogo: "",
     percentage: "50%"
   },
   {
     id: 9,
-    LanguageLogo: NodeJsLogo,
+    LanguageLogo: "",
     percentage: "20%"
   },
   {
     id: 10,
-    LanguageLogo: AwsLogo,
+    LanguageLogo: "",
     percentage: "20%"
   },
 ]

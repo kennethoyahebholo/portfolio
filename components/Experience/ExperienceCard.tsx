@@ -2,7 +2,6 @@ import React from 'react'
 import Image from "next/image"
 import myFace from "../../public/profile.png"
 import { motion } from "framer-motion"
-import PayfiLogo from '../../public/svg/PayfiLogo'
 
 type Props = {
   role: string,

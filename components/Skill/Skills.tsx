@@ -14,6 +14,12 @@ const Skills = ({ directionLeft, LanguageLogo, percentage } : Props ) => {
   return (
     <div className='group relative flex cursor-pointer'>
       <motion.div
+
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
       
       initial={{
       x: directionLeft? -200 : 200,

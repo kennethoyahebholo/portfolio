@@ -2,9 +2,8 @@ import React from 'react'
 import { motion } from "framer-motion"
 import ExperienceCard from "../Experience/ExperienceCard"
 import PayfiLogo from '../../public/svg/PayfiLogo'
-// import UseCoinsLogo from "../../public/svg/usecoins-light.svg";
-// import Dspatch from "../../public/svg/dspatch_logo-abu.svg";
-// import Test from "../../public/svg/logotest.jpg";
+import UseCoinsLogo from "../../public/svg/UseCoinsLogo";
+import DspatchLogo from "../../public/svg/DspatchLogo";
 
 type Props = {}
 
@@ -13,7 +12,7 @@ const myExperience = [
     id: 1,
     role: "internship",
     companyName: "PAYFI",
-    company_logo: <PayfiLogo />,
+    CompanyLogo: PayfiLogo,
     started_at: "1st November 2022",
     ended_at: "Till Now",
     first_summary: "Clean up merchant frontend codebase to remove redundant codes.",
@@ -26,7 +25,7 @@ const myExperience = [
     id: 2,
     role: "frontend engineer",
     companyName: "USECOINS",
-    company_logo: <PayfiLogo />,
+    CompanyLogo: UseCoinsLogo,
     started_at: "1st November 2022",
     ended_at: "Till now",
     first_summary: "Consumed endpoint for finding and listing invoices",
@@ -39,7 +38,7 @@ const myExperience = [
     id: 3,
     role: "internship",
     companyName: "DSpatch",
-    company_logo: <PayfiLogo />,
+    CompanyLogo: DspatchLogo,
     started_at: "1st November 2022",
     ended_at: "Till now",
     first_summary: "Footer Component User Interface.",
@@ -52,7 +51,7 @@ const myExperience = [
     id: 4,
     role: "Frontend Engineer",
     companyName: "FREELANCER",
-    company_logo: <PayfiLogo />,
+    CompanyLogo: PayfiLogo,
     started_at: "1st November 2022",
     ended_at: "Till now",
     first_summary: "Footer Component User Interface.",

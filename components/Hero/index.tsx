@@ -22,23 +22,24 @@ function Index({}: Props) {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5}}
-    className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'
+    // className='flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative'
+    className='min-h-screen flex flex-col space-y-8 items-center justify-center text-center'
     >
       <BackgroundCircle />
       <Image className='relative rounded-full h-32 w-32 mx-auto object-cover' src={myFace} alt="" />
     
-    <div 
-    className='z-20'
-    >
-      <h2 className='text-sm uppercase text-grey-500 pb-2 tracking-[15px]'>Frontend Engineer</h2>
-      <h1 
-      className='text-4xl lg:text-6xl font-semibold px-10'
+      <div 
+      className='z-20'
       >
-        <span className='mr-3'>{text}</span>
-        <Cursor cursorColor='#F7AB0A'/>
-      </h1>
+        <h2 className='text-[15px] md:text-[30px] uppercase text-grey-500 pb-2 tracking-[8px] md:tracking-[15px]'>Frontend Engineer</h2>
+        <h1 
+        className='text-1xl md:text-3xl lg:text-6xl font-semibold px-10'
+        >
+          <span className='mr-3'>{text}</span>
+          <Cursor cursorColor='#F7AB0A'/>
+        </h1>
 
-      <div className='pt-5'>
+      <div>
         <Link
         href={"#about"}>
         <button className='heroButton'>About</button>
@@ -60,7 +61,7 @@ function Index({}: Props) {
         </Link>   
         
       </div>
-    </div>           
+      </div>           
     </motion.div>
   )
 }

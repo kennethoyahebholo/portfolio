@@ -14,8 +14,9 @@ import myFace from "../public/profile.png"
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
-    scrollbar-thin
+    <div 
+    className="h-screen bg-[rgb(36,36,36)] text-white snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
+    scrollbar-thin relative
     ">
       <Head>
         <title>Ken&apos;s Portfolio</title>
@@ -27,38 +28,38 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <section id="hero" className="snap-start">
+      <section id="hero">
         <Hero />
       </section>
       
 
       {/* About */}
-      <section id="about" className="snap-center">
+      <section id="about">
         <About />
       </section>
 
       {/* Experience */}
-      <section id="experience" className="snap-center">
+      <section id="experience">
         <Experience />
       </section>
 
       {/* Skills */}
-      <section id="skills" className="snap-center">
+      <section id="skills">
         <Skill />
       </section>
 
       {/* Projects */}
-      <section id="projects" className="snap-start">
+      <section id="projects">
         <Projects />
       </section>
 
       {/* Contact Me */}
-      <section id="contactMe" className="snap-center">
+      <section id="contactMe">
         <ContactScreen />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+      <Link className="" href="#hero">
+        <footer className="bottom-3 w-full cursor-pointer sticky z-50">
           <div className="flex items-center justify-center">
             <Image
             className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"

@@ -7,7 +7,7 @@ type Props = {}
 
 function index({}: Props) {
   return (
-    <div className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
+    <div className='sticky top-0 p-5 flex flex-wrap items-start justify-between w-full mx-auto z-20 xl:items-center'>
       <motion.div
         initial={{
           x: -500,
@@ -22,12 +22,12 @@ function index({}: Props) {
         transition={{
           duration: 1.5,
         }}
-      className='flex flex-row items-center'>
+      className='flex flex-row items-center flex-wrap'>
         {/* Social Icons */}
-        <SocialIcon url="https://www.linkedin.com/in/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon url="https://github.com/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon url="https://wa.me/2348102718467" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon url="https://www.twitter.com/izzy__ken" fgColor="grey" bgColor='transparent' target="_blank"/>
+        <SocialIcon className='hover:opacity-100 opacity-40 cursor-pointer transition-opacity' url="https://www.linkedin.com/in/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
+        <SocialIcon className='hover:opacity-100 opacity-40 cursor-pointer transition-opacity' url="https://github.com/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
+        <SocialIcon className='hover:opacity-100 opacity-40 cursor-pointer transition-opacity' url="https://wa.me/2348102718467" fgColor="grey" bgColor='transparent' target="_blank"/>
+        <SocialIcon className='hover:opacity-100 opacity-40 cursor-pointer transition-opacity' url="https://www.twitter.com/izzy__ken" fgColor="grey" bgColor='transparent' target="_blank"/>
       </motion.div>
 
       <motion.div
@@ -45,7 +45,7 @@ function index({}: Props) {
           duration: 1.5,
         }}
         className='flex flex-row items-center'>
-        <SocialIcon network='email' fgColor="grey" bgColor='transparent'/>
+        <SocialIcon url="#contactMe" className='hover:opacity-100 opacity-40 cursor-pointer transition-opacity' network='email' fgColor="grey" bgColor='transparent'/>
         <Link
         href={"#contactMe"}>
         <p className='uppercase hidden md:inline-flex'>Get In Touch</p>   

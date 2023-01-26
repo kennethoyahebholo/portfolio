@@ -12,7 +12,7 @@ function index({}: Props) {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5}}
-    className='h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
+    className='min-h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
     >
      <h3 
      className='top-24 absolute uppercase tracking-[20px] text-gray-500 text-2xl' 
@@ -22,7 +22,7 @@ function index({}: Props) {
      {/* <div className=''> */}
       <motion.div
       initial={{
-        x: -200,
+        x: -100,
         opacity: 0,    
       }}
       transition={{
@@ -35,7 +35,7 @@ function index({}: Props) {
       <Image       
       src={myFace}
       className='
-      -mb-20 
+      mb-10 
       md:mb-0 
       flex-shrink-0 
       w-36 h-36 

@@ -7,7 +7,7 @@ type Props = {}
 
 function index({}: Props) {
   return (
-    <div className='sticky bg-[rgb(36,36,36)] top-0 p-5 flex flex-wrap items-start justify-between w-full mx-auto z-50 xl:items-center'>
+    <div className='sticky bg-transparent backdrop-blur top-0 p-5 flex flex-wrap items-start justify-between w-full mx-auto z-50 xl:items-center'>
       <motion.div
         initial={{
           x: -500,

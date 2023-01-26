@@ -87,15 +87,15 @@ const index = (props: Props) => {
     transition={{ duration: 1.5}}
 
     className='flex relative  flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl-px-6 min-h-screen justify-center xl:space-y-0 mx-auto items-center'>
-     <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
+      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
 
-     <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over a skill for currency proficiency</h3>
+      <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over or click a skill for current proficiency</h3>
 
-     <div className='grid grid-cols-2 xl:grid-cols-7 gap-4 mt-[250px] '>
-      {codingSkills.map((skill) => (
-        <Skills key={skill.id} {...skill} />
-      ))}
-     </div>
+      <div className='grid grid-cols-2 xl:grid-cols-7 gap-4 mt-[250px] '>
+        {codingSkills.map((skill) => (
+          <Skills key={skill.id} {...skill} />
+        ))}
+      </div>
     </motion.div>
   )
 }

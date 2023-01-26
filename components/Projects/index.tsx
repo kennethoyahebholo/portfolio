@@ -6,7 +6,7 @@ import myFace from "../../public/homepageBusiness.png"
 type Props = {}
 
 const Index = (props: Props) => {
- const projects = [1, 2, 3, 4, 5]
+ const projects = [{id: 1, project_name: "LinkedIn clone"}, {id: 2, project_name: "Gmail clone"}, {id: 3, project_name: "UPS clone"}, {id: 4, project_name: "Todo App"}, {id: 5, project_name: "UPS clone"}]
   return (
     <motion.div
 
@@ -46,7 +46,7 @@ const Index = (props: Props) => {
         </motion.div>
        <div className='space-y-10 md:px-10 max-w-6xl'>
         <h4 className='text-2xl font-semibold text-center'>
-         <span className='underline decoration-[#F7AB0A]/50'>Case Study { i + 1} of {projects.length}:</span> UPS clone
+         <span className='underline decoration-[#F7AB0A]/50'>Case Study {project.id} of {projects.length}:</span> {project.project_name}
         </h4>
 
         <p className='text-sm text-center md:text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta aut repellendus porro veritatis, eligendi sed, accusamus qui voluptate necessitatibus, vel dolores rerum tenetur dolorem eum? Quae possimus provident nisi.</p>

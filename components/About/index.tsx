@@ -59,7 +59,7 @@ function index({}: Props) {
       <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "}background</h4>
 
       <p className='text-1xl'>
-        A Frontend Developer with 2 year+ Enterprise Level Experience Designing and building highly scalable system, across the Technology sectors. A collaborative and customer centric engineer who is ever learning to ensure a greater customer satisfaction in products deliverables.
+        A Frontend Engineer with 2 year+ Enterprise Level Experience Designing and building highly scalable system, across the Technology sectors. A collaborative and customer centric engineer who is ever learning to ensure a greater customer satisfaction in products deliverables.
         <br />
         <br />
         I am a problem solver who is committed to learning, excellence, and tackling oppositions. I am also believing strongly in team spirit, getting each and every person involve to achieve a particular goal.

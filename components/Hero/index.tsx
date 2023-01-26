@@ -31,7 +31,7 @@ function Index({}: Props) {
       <div 
       className='z-20'
       >
-        <h2 className='text-[15px] md:text-[30px] uppercase text-grey-500 pb-2 tracking-[8px] md:tracking-[15px]'>Frontend Engineer</h2>
+        <h2 className='text-[15px] md:text-[25px] uppercase text-grey-500 pb-2 tracking-[8px] md:tracking-[15px]'>Frontend Engineer</h2>
         <h1 
         className='text-1xl md:text-3xl lg:text-6xl font-semibold px-10'
         >
@@ -39,7 +39,7 @@ function Index({}: Props) {
           <Cursor cursorColor='#F7AB0A'/>
         </h1>
 
-      <div>
+      <div className='mt-4'>
         <Link
         href={"#about"}>
         <button className='heroButton'>About</button>

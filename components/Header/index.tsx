@@ -1,13 +1,13 @@
-import React from 'react'
-import { SocialIcon } from "react-social-icons"
-import { motion } from "framer-motion"
-import Link from 'next/link'
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-type Props = {}
+type Props = {};
 
 function index({}: Props) {
   return (
-    <div className='sticky bg-transparent backdrop-blur top-0 p-5 flex flex-wrap items-start justify-between w-full mx-auto z-50 xl:items-center'>
+    <div className="sticky bg-transparent backdrop-blur top-0 p-5 flex flex-wrap items-start justify-between w-full mx-auto z-50 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -22,12 +22,30 @@ function index({}: Props) {
         transition={{
           duration: 1.5,
         }}
-      className='flex flex-row items-center flex-wrap'>
+        className="flex flex-row items-center flex-wrap"
+      >
         {/* Social Icons */}
-        <SocialIcon className='cursor-pointer transition-opacity' url="https://www.linkedin.com/in/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon className='cursor-pointer transition-opacity' url="https://github.com/kennethoyahebholo/" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon className='cursor-pointer transition-opacity' url="https://wa.me/2348102718467" fgColor="grey" bgColor='transparent' target="_blank"/>
-        <SocialIcon className='cursor-pointer transition-opacity' url="https://www.twitter.com/izzy__ken" fgColor="grey" bgColor='transparent' target="_blank"/>
+        <SocialIcon
+          className="cursor-pointer transition-opacity"
+          url="https://www.linkedin.com/in/kennethoyahebholo/"
+          fgColor="grey"
+          bgColor="transparent"
+          target="_blank"
+        />
+        <SocialIcon
+          className="cursor-pointer transition-opacity"
+          url="https://github.com/kennethoyahebholo/"
+          fgColor="grey"
+          bgColor="transparent"
+          target="_blank"
+        />
+        <SocialIcon
+          className="cursor-pointer transition-opacity"
+          url="https://www.twitter.com/izzy__ken"
+          fgColor="grey"
+          bgColor="transparent"
+          target="_blank"
+        />
       </motion.div>
 
       <motion.div
@@ -44,15 +62,21 @@ function index({}: Props) {
         transition={{
           duration: 1.5,
         }}
-        className='flex flex-row items-center'>
-        <SocialIcon url="#contactMe" className='cursor-pointer transition-opacity' network='email' fgColor="grey" bgColor='transparent'/>
-        <Link
-        href={"#contactMe"}>
-        <p className='uppercase hidden md:inline-flex'>Get In Touch</p>   
-        </Link>          
+        className="flex flex-row items-center"
+      >
+        <SocialIcon
+          url="#contactMe"
+          className="cursor-pointer transition-opacity"
+          network="email"
+          fgColor="grey"
+          bgColor="transparent"
+        />
+        <Link href={"#contactMe"}>
+          <p className="uppercase hidden md:inline-flex">Get In Touch</p>
+        </Link>
       </motion.div>
     </div>
-  )
+  );
 }
 
-export default index
+export default index;

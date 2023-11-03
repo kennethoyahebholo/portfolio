@@ -35,7 +35,7 @@ const Index = (props: Props) => {
       description:
         "The Tech Time Landing Page is a captivating and responsive web portal designed and constructed using React and seamlessly hosted on Netlify. This elegant landing page is divided into distinct sections, including a visually striking hero section that instantly captures visitors' attention, an informative 'About Us' section, a comprehensive showcase of available courses, and a testimonials section that highlights the positive experiences of users. The landing page is adorned with an aesthetically pleasing header and footer, enhancing the overall user experience. The project's meticulous design ensures that it adapts flawlessly to various devices and screen sizes, providing an engaging and user-friendly interface for all visitors.",
       technologyStack: "React and Netlify",
-      url: "https://melodious-ganache-8ced8e.netlify.app/",
+      url: "https://tech-time-web.netlify.app/",
     },
     {
       id: 4,
@@ -113,11 +113,11 @@ const Index = (props: Props) => {
 
               <p className="text-sm text-center md:text-left">
                 {project?.description}{" "}
-                <span className="underline decoration-[#F7AB0A]/50 cursor-pointer">
-                  <a href={project?.url} target="_black">
+                <a href={project?.url} target="_blank" rel="noreferrer">
+                  <span className="underline decoration-[#F7AB0A]/50 cursor-pointer">
                     click here
-                  </a>
-                </span>
+                  </span>
+                </a>
               </p>
 
               <h3 className="text-sm text-center md:text-left">

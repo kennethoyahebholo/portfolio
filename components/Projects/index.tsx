@@ -108,7 +108,9 @@ const Index = (props: Props) => {
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {project.id} of {projects.length}:
                 </span>{" "}
-                {project.name}
+                <a href={project?.url} target="_blank" rel="noreferrer">
+                  <span>{project.name}</span>
+                </a>
               </h4>
 
               <p className="text-sm text-center md:text-left">

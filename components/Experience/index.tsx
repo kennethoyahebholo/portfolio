@@ -82,25 +82,25 @@ const myExperience = [
     fourth_summary: "******",
     fifth_summary: "******",
   },
-  {
-    id: 5,
-    myFace: profilePicture1,
-    role: "frontend engineer",
-    companyName: "FREELANCER",
-    CompanyLogo: DspatchLogo,
-    started_at: "27th June 2021",
-    ended_at: "Till now",
-    first_summary:
-      "Collaborated with multiple startups, providing expertise in frontend development and contributing to the success of various projects.",
-    second_summary:
-      "Worked closely with cross-functional teams, fostering efficient communication and teamwork to deliver high-quality web applications.",
-    third_summary:
-      "Designed, developed, and maintained web applications, ensuring responsive and user-friendly interfaces that meet client and user expectations.",
-    fourth_summary:
-      "Utilized cutting-edge technologies and best practices to achieve outstanding results.",
-    fifth_summary:
-      "Delivered exceptional value and impact in diverse freelance projects.",
-  },
+  // {
+  //   id: 5,
+  //   myFace: profilePicture1,
+  //   role: "frontend engineer",
+  //   companyName: "FREELANCER",
+  //   CompanyLogo: DspatchLogo,
+  //   started_at: "27th June 2021",
+  //   ended_at: "Till now",
+  //   first_summary:
+  //     "Collaborated with multiple startups, providing expertise in frontend development and contributing to the success of various projects.",
+  //   second_summary:
+  //     "Worked closely with cross-functional teams, fostering efficient communication and teamwork to deliver high-quality web applications.",
+  //   third_summary:
+  //     "Designed, developed, and maintained web applications, ensuring responsive and user-friendly interfaces that meet client and user expectations.",
+  //   fourth_summary:
+  //     "Utilized cutting-edge technologies and best practices to achieve outstanding results.",
+  //   fifth_summary:
+  //     "Delivered exceptional value and impact in diverse freelance projects.",
+  // },
 ];
 
 const index = (props: Props) => {

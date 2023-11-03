@@ -18,9 +18,6 @@ function index({}: Props) {
       <h3 className="top-24 absolute uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
-      {/* <br/> */}
-
-      {/* <div className=''> */}
       <motion.div
         initial={{
           x: -100,
@@ -52,8 +49,6 @@ function index({}: Props) {
         />
       </motion.div>
 
-      {/* <br /> */}
-
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
@@ -62,25 +57,23 @@ function index({}: Props) {
         </h4>
 
         <p className="text-1xl">
-          A Frontend Engineer with 2 year+ Enterprise Level Experience Designing
-          and building highly scalable system, across the Technology sectors. A
-          collaborative and customer centric engineer who is ever learning to
-          ensure a greater customer satisfaction in products deliverables.
+          As a Frontend Engineer with over 2 years of enterprise-level
+          experience, I specialize in designing and building highly scalable
+          systems across various technology sectors. I am a collaborative and
+          customer-centric engineer committed to continuous learning to enhance
+          customer satisfaction in product deliverables.
           <br />
           <br />
-          I am a problem solver who is committed to learning, excellence, and
-          tackling oppositions. I am also believing strongly in team spirit,
-          getting each and every person involve to achieve a particular goal.
-          Furthermore, I am diligent, which prompts me to pay attention to every
-          detail, with great interest in technology innovations.
+          I&apos;m a dedicated problem solver with a strong commitment to
+          learning and excellence. I believe in the power of teamwork, involving
+          everyone to achieve common goals. My diligence and keen interest in
+          technology innovations drive my attention to detail.
           <br />
           <br />
-          My immediate goal is to interact fully and work with a large society,
-          growth-oriented organization or institutions dealing with people from
-          all works of life.
+          My immediate goal is to collaborate with a diverse and growth-focused
+          organization, serving people from all walks of life.
         </p>
       </div>
-      {/* </div>      */}
     </motion.div>
   );
 }

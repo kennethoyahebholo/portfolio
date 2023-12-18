@@ -10,15 +10,15 @@ type Props = {};
 
 const Index = (props: Props) => {
   const projects = [
-    // {
-    //   id: 1,
-    //   name: "Netflix clone",
-    //   design: NetflixDesign,
-    //   description:
-    //     "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of themoviedb API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories, including Netflix Originals, top-rated, trending now, action, comedy, horror, romance, and documentaries, ensuring a diverse selection for every taste. Real-time updates from the themoviedb API keep users informed with the latest and most current movie content. The user interface is designed for ease of navigation and a visually appealing experience, allowing users to effortlessly search for and discover their favorite movies. The project is hosted on Firebase, providing reliable and scalable hosting to ensure users can access the platform without interruptions.",
-    //   technologyStack: "React, themoviedb API, Firebase",
-    //   url: "https://netfixclone-1c479.web.app/",
-    // },
+    {
+      id: 1,
+      name: "Netflix clone",
+      design: NetflixDesign,
+      description:
+        "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of themoviedb API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories, including Netflix Originals, top-rated, trending now, action, comedy, horror, romance, and documentaries, ensuring a diverse selection for every taste. Real-time updates from the themoviedb API keep users informed with the latest and most current movie content. The user interface is designed for ease of navigation and a visually appealing experience, allowing users to effortlessly search for and discover their favorite movies. The project is hosted on Firebase, providing reliable and scalable hosting to ensure users can access the platform without interruptions.",
+      technologyStack: "React, themoviedb API, Firebase",
+      url: "https://netflix-clonexp.netlify.app/",
+    },
     {
       id: 2,
       name: "LinkedIn clone",

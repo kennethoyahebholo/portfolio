@@ -36,8 +36,8 @@ const myExperience = [
     role: "frontend engineer",
     companyName: "USECOINS",
     CompanyLogo: UseCoinsLogo,
-    started_at: "1st July 2022",
-    ended_at: "Till now",
+    started_at: "1st Feb 2022",
+    ended_at: "1st Feb 2024",
     first_summary:
       "Consumed endpoints for finding and listing invoices, streamlining the invoice management process.",
     second_summary:
@@ -55,8 +55,8 @@ const myExperience = [
     role: "frontend engineer",
     companyName: "USAF",
     CompanyLogo: UsafLogo,
-    started_at: "1st March 2022",
-    ended_at: "Till now",
+    started_at: "1st Jan 2023",
+    ended_at: "1st Feb 2024",
     first_summary:
       "Led codebase restructuring efforts, optimizing the project's architecture for enhanced performance and maintainability.",
     second_summary:

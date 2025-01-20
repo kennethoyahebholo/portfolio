@@ -57,7 +57,7 @@ function index({}: Props) {
         </h4>
 
         <p className="text-1xl">
-          As a Frontend Engineer with over 2 years of enterprise-level
+          As a Frontend Engineer with over 4 years of enterprise-level
           experience, I specialize in designing and building highly scalable
           systems across various technology sectors. I am a collaborative and
           customer-centric engineer committed to continuous learning to enhance

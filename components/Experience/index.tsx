@@ -1,106 +1,151 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "../Experience/ExperienceCard";
+// import ForcytheLogo from "../../public/svg/ForcytheLogo";
 import PayfiLogo from "../../public/svg/PayfiLogo";
+// import JasereLogo from "../../public/svg/JasereLogo";
 import UseCoinsLogo from "../../public/svg/UseCoinsLogo";
 import DspatchLogo from "../../public/svg/DspatchLogo";
-import UsafLogo from "../../public/svg/UsafLogo";
-import profilePicture1 from "../../public/profile.png";
-import profilePicture2 from "../../public/svg/profile_picture.jpg";
+// import BlwItLogo from "../../public/svg/BlwItLogo";
+// import FreelancerLogo from "../../public/svg/FreelancerLogo";
+import profilePicture from "../../public/profile.png";
 
 type Props = {};
 
 const myExperience = [
   {
     id: 1,
-    myFace: profilePicture2,
-    role: "software engineer (frontend)",
-    companyName: "PAYFI",
-    CompanyLogo: PayfiLogo,
-    started_at: "1st November 2022",
-    ended_at: "Till Now",
+    myFace: profilePicture,
+    role: "Frontend Developer",
+    companyName: "Forcythe",
+    // CompanyLogo: ForcytheLogo,
+    started_at: "1st February 2025",
+    ended_at: "8th May 2025",
     first_summary:
-      "Led an extensive codebase refinement initiative, streamlining the merchant frontend application by eliminating redundancy and enhancing efficiency.",
+      "Delivered responsive, accessible UIs for DC Innovate and Apapa LGA websites using React/Next.js and Tailwind CSS—aligning with brand guidelines and optimizing across devices.",
     second_summary:
-      "Optimized and updated the SDK using React, improving its performance and functionality.",
+      "Integrated RESTful APIs to enhance Perime, Peripay Merchant, and corporate dashboards—applying state management and performance optimizations for seamless workflows.",
     third_summary:
-      "Developed user-centric web applications with React, delivering seamless and responsive user experiences.",
+      "Contributed in agile sprints—leading code reviews, resolving front‑end issues, and collaborating with product teams to align features with roadmaps.",
     fourth_summary:
-      "Updated an intuitive admin dashboard, streamlining administrative operations and data management.",
+      "Implemented UI enhancements on forcythe.com and apapalga.netlify.app—ensuring consistent styling and user experience across internal and public sites.",
     fifth_summary:
-      "Enhanced Paystack payment gateway for better usage and optimized flow.",
+      "Maintained high code quality standards through ESLint configurations, unit testing, and documentation for better team onboarding.",
   },
   {
     id: 2,
-    myFace: profilePicture1,
-    role: "frontend engineer",
-    companyName: "USECOINS",
-    CompanyLogo: UseCoinsLogo,
-    started_at: "1st Feb 2022",
-    ended_at: "1st Feb 2024",
+    myFace: profilePicture,
+    role: "Software Engineer",
+    companyName: "Payfi",
+    CompanyLogo: PayfiLogo,
+    started_at: "1st November 2022",
+    ended_at: "Present",
     first_summary:
-      "Consumed endpoints for finding and listing invoices, streamlining the invoice management process.",
+      "Crafted and maintained high‑performance web applications using React and Next.js, ensuring fast time‑to‑interactive and responsive layouts.",
     second_summary:
-      "Designed and implemented an Invoice generation page/form, integrating it with the necessary endpoints for seamless invoice creation.",
+      "Architected and consumed GraphQL queries and mutations to optimize data fetching and boost scalability.",
     third_summary:
-      "Contributed to the implementation of the website based on Figma designs, ensuring a visually appealing and user-friendly interface.",
+      "Built a modular theming system with Tailwind CSS—delivering consistent brand identity and rapid style iterations.",
     fourth_summary:
-      "Developed an Invoice hosting page, providing a platform for accessible and organized invoice storage.",
+      "Led Next.js‑driven redesigns of payfi.ca and kaabo.co—applying modern UX/UI principles to elevate user engagement.",
     fifth_summary:
-      "Resolved and fixed bugs related to the checkout process, enhancing the overall user experience.",
+      "Collaborated cross‑functionally in agile environments—troubleshooting complex bugs, prioritizing features, and ensuring on‑time releases.",
   },
   {
     id: 3,
-    myFace: profilePicture1,
-    role: "frontend engineer",
-    companyName: "USAF",
-    CompanyLogo: UsafLogo,
-    started_at: "1st Jan 2023",
-    ended_at: "1st Feb 2024",
+    myFace: profilePicture,
+    role: "Software Engineer",
+    companyName: "Jasere",
+    // CompanyLogo: JasereLogo,
+    started_at: "1st April 2024",
+    ended_at: "1st February 2025",
     first_summary:
-      "Led codebase restructuring efforts, optimizing the project's architecture for enhanced performance and maintainability.",
+      "Directed and mentored the frontend engineering team—fostering collaboration, code quality, and continuous learning for polished delivery.",
     second_summary:
-      "Reviewed and merged developers' code, ensuring code quality and adherence to best practices.",
+      "Architected scalable Next.js applications—optimizing performance and enabling seamless feature rollouts.",
     third_summary:
-      "Took on a leadership role, guiding and coordinating the efforts of the development team to achieve project objectives.",
-    fourth_summary: "******",
-    fifth_summary: "******",
+      "Engineered REST API and WebSocket integrations to power real‑time data feeds and interactive interfaces.",
+    fourth_summary:
+      "Led comprehensive codebase refactoring—eliminating technical debt and codifying best practices.",
+    fifth_summary:
+      "Spearheaded website redesigns with pixel‑perfect UI components and modern UX principles to elevate brand perception.",
   },
   {
     id: 4,
-    myFace: profilePicture2,
-    role: "internship",
+    myFace: profilePicture,
+    role: "Frontend Engineer (Contract)",
+    companyName: "UseCoins",
+    CompanyLogo: UseCoinsLogo,
+    started_at: "1st November 2022",
+    ended_at: "4th April 2023",
+    first_summary:
+      "Built responsive dashboard UIs for invoice management, integrating RESTful endpoints for search, listing, and generation.",
+    second_summary:
+      "Implemented interactive invoice creation and hosting pages—streamlining billing workflows and data access.",
+    third_summary:
+      "Translated Figma designs into reusable React components, ensuring pixel‑perfect fidelity and accessibility.",
+    fourth_summary:
+      "Collaborated in scrum ceremonies—identifying and fixing checkout flow bugs to enhance payment reliability.",
+    fifth_summary:
+      "Integrated real‑time socket connections to enable live updates and maintain seamless backend communication.",
+  },
+  {
+    id: 5,
+    myFace: profilePicture,
+    role: "Frontend Developer",
     companyName: "DSpatch",
     CompanyLogo: DspatchLogo,
     started_at: "1st December 2022",
-    ended_at: "1st March 2023",
+    ended_at: "22nd February 2023",
     first_summary:
-      "Designed and developed the Footer Component User Interface, enhancing website navigation and aesthetics.",
+      "Architected and built a reusable React Footer component—reinforcing navigation consistency across the site.",
     second_summary:
-      "Implemented the user interface for the About Us Page, contributing to an informative and engaging online presence.",
-    third_summary: "******",
-    fourth_summary: "******",
-    fifth_summary: "******",
+      "Engineered the ‘About Us’ page UI with responsive, design‑faithful React layouts for an engaging online presence.",
+    third_summary:
+      "Optimized component performance through lazy loading and code splitting to reduce initial load times.",
+    fourth_summary:
+      "Collaborated with designers to iterate on UI elements—maintaining alignment with brand guidelines.",
+    fifth_summary:
+      "Documented styling guidelines and component usage to accelerate future contributor onboarding.",
   },
-  // {
-  //   id: 5,
-  //   myFace: profilePicture1,
-  //   role: "frontend engineer",
-  //   companyName: "FREELANCER",
-  //   CompanyLogo: DspatchLogo,
-  //   started_at: "27th June 2021",
-  //   ended_at: "Till now",
-  //   first_summary:
-  //     "Collaborated with multiple startups, providing expertise in frontend development and contributing to the success of various projects.",
-  //   second_summary:
-  //     "Worked closely with cross-functional teams, fostering efficient communication and teamwork to deliver high-quality web applications.",
-  //   third_summary:
-  //     "Designed, developed, and maintained web applications, ensuring responsive and user-friendly interfaces that meet client and user expectations.",
-  //   fourth_summary:
-  //     "Utilized cutting-edge technologies and best practices to achieve outstanding results.",
-  //   fifth_summary:
-  //     "Delivered exceptional value and impact in diverse freelance projects.",
-  // },
+  {
+    id: 6,
+    myFace: profilePicture,
+    role: "Frontend Engineer (Contract)",
+    companyName: "BLW IT Office",
+    // CompanyLogo: BlwItLogo,
+    started_at: "6th April 2021",
+    ended_at: "28th December 2021",
+    first_summary:
+      "Transformed pixel‑perfect designs into accessible HTML/CSS layouts—optimizing breakpoints for seamless cross‑device UX.",
+    second_summary:
+      "Led end‑to‑end development of a React/TypeScript web app—leveraging Tailwind CSS for rapid, consistent styling.",
+    third_summary:
+      "Built secure authentication modules with form validation and session handling for robust user flows.",
+    fourth_summary:
+      "Designed a state‑driven navigation bar and interactive dashboard components to streamline user interactions.",
+    fifth_summary:
+      "Constructed a library of reusable UI elements—enabling modular layouts and accelerated feature development.",
+  },
+  {
+    id: 7,
+    myFace: profilePicture,
+    role: "Frontend Engineer (Freelancer)",
+    companyName: "Freelancer",
+    // CompanyLogo: FreelancerLogo,
+    started_at: "10th August 2020",
+    ended_at: "3rd April 2021",
+    first_summary:
+      "Translated detailed UI/UX designs into modular HTML5/CSS3 layouts—delivering responsive interfaces across devices.",
+    second_summary:
+      "Architected scalable React applications—integrating RESTful and real‑time APIs for dynamic features.",
+    third_summary:
+      "Implemented accessible, performant UI components with attention to usability and maintainability.",
+    fourth_summary:
+      "Optimized front‑end performance through code splitting, caching strategies, and lazy loading.",
+    fifth_summary:
+      "Managed end‑to‑end project delivery—scoping, development, and client communication for multiple small‑scale projects.",
+  },
 ];
 
 const index = (props: Props) => {
@@ -115,12 +160,7 @@ const index = (props: Props) => {
         Experience
       </h3>
 
-      <div
-        className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80     
-
-      mt-[95px]
-      "
-      >
+      <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 mt-[95px]">
         {myExperience.map((experience) => (
           <ExperienceCard key={experience.id} {...experience} />
         ))}

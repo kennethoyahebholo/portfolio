@@ -57,21 +57,23 @@ function index({}: Props) {
         </h4>
 
         <p className="text-1xl">
-          As a Frontend Engineer with over 4 years of enterprise-level
-          experience, I specialize in designing and building highly scalable
-          systems across various technology sectors. I am a collaborative and
-          customer-centric engineer committed to continuous learning to enhance
-          customer satisfaction in product deliverables.
+          A Software Engineer with 4 years+ Enterprise Level Experience
+          Designing and building highly scalable system, across the Technology
+          sectors. A collaborative and customer centric engineer who is ever
+          learning to ensure a greater customer satisfaction in products
+          deliverables.
           <br />
           <br />
-          I&apos;m a dedicated problem solver with a strong commitment to
-          learning and excellence. I believe in the power of teamwork, involving
-          everyone to achieve common goals. My diligence and keen interest in
-          technology innovations drive my attention to detail.
+          I am a problem solver who is committed to learning, excellence, and
+          tackling oppositions. I also believe strongly in team spirit, getting
+          each and every person involved to achieve: particular goal.
           <br />
           <br />
-          My immediate goal is to collaborate with a diverse and growth-focused
-          organization, serving people from all walks of life.
+          Furthermore, I am diligent, which prompts me to pay attention to every
+          detail, with great interest in technology innovations. My immediate
+          goal is to interact fully and work with a large society,
+          growth-oriented organization or institutions dealing with people from
+          all walks of life.
         </p>
       </div>
     </motion.div>

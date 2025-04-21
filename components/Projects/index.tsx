@@ -12,59 +12,74 @@ const Index = (props: Props) => {
   const projects = [
     {
       id: 1,
-      name: "Netflix clone",
-      design: NetflixDesign,
+      name: "Payfi",
       description:
-        "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of themoviedb API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories, including Netflix Originals, top-rated, trending now, action, comedy, horror, romance, and documentaries, ensuring a diverse selection for every taste. Real-time updates from the themoviedb API keep users informed with the latest and most current movie content. The user interface is designed for ease of navigation and a visually appealing experience, allowing users to effortlessly search for and discover their favorite movies. The project is hosted on Firebase, providing reliable and scalable hosting to ensure users can access the platform without interruptions.",
-      technologyStack: "React, themoviedb API, Firebase",
-      url: "https://netflix-clonexp.netlify.app/",
+        "Next.js & Tailwind CSS revamp of payfi.ca, a premier rent‑reporting platform. Enabled students to build credit with on‑time rent payments (no credit check), zero platform fees, and rewards programs. Integrated Passage partnership banner (up to CAD 65,000 support), Equifax reporting, and features like realtor matching, Pre‑Rent & Rent Guarantee, bill pay, and tenant portal—all delivered with engaging testimonials and a streamlined 4‑step onboarding flow.",
+      technologyStack: "Next.js, Tailwind CSS",
+      url: "https://payfi.ca",
     },
     {
       id: 2,
-      name: "LinkedIn clone",
+      name: "Ka’bo",
+      description:
+        "Next.js & Tailwind CSS build of kaabo.co, a student housing marketplace with multilingual support and zero hidden fees. Features include budget‑driven property search, guarantor support for international students, roommate matching, maintenance requests, and rewards for on‑time rent. Includes dynamic blog feeds, tenant & landlord dashboards, and social proof from student testimonials to drive trust and engagement.",
+      technologyStack: "Next.js, Tailwind CSS",
+      url: "https://kaabo.co",
+    },
+    {
+      id: 3,
+      name: "Apapa Local Government",
+      description:
+        "Next.js & Tailwind CSS site for apapalga.gov.ng—Nigeria’s maritime hub portal. Highlights real‑time stats (population, cargo throughput, revenue), community news & events, service directories (housing, healthcare, permits), e‑government forms, and quick‑link feedback tools. Features “Welcome” message from the Executive Chairman, volunteer sign‑ups, levy payments, and an interactive events calendar to drive civic engagement.",
+      technologyStack: "Next.js, Tailwind CSS",
+      url: "https://apapa-lg.netlify.app/",
+    },
+    {
+      id: 4,
+      name: "Forcythe",
+      description:
+        "Next.js & Tailwind CSS clone of forcythe.com—showcasing digital product innovation. Includes hero call‑to‑action (‘Book a Call’), service highlights (Idea → Launch), interactive case study carousel, client success stories, and key metrics (projects, clients, team leads). Powered by CMS integrations and optimized for performance, it emphasizes B2B/B2C product strategy, cost efficiency, and quick‑support messaging.",
+      technologyStack: "Next.js, Tailwind CSS",
+      url: "https://forcythe-bestclone.netlify.app/",
+    },
+    {
+      id: 5,
+      name: "Netflix Clone",
+      design: NetflixDesign,
+      description:
+        "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of the TMDB API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories—Netflix Originals, Top Rated, Trending Now, Action, Comedy, Horror, Romance, and Documentaries—ensuring a diverse selection for every taste. Real-time updates from the TMDB API keep users informed with the latest content, and the intuitive UI allows effortless search and discovery. Hosted on Firebase for reliable, scalable access.",
+      technologyStack: "React, TMDB API, Firebase",
+      url: "https://netflix-clonexp.netlify.app/",
+    },
+    {
+      id: 6,
+      name: "LinkedIn Clone",
       design: LinkedInDesign,
       description:
-        "The LinkedIn Clone is a simplified professional networking platform that focuses on three key features. Built using React for the frontend and Firebase for authentication and data storage, this project enables users to securely sign in, register for new accounts, establish basic user profiles, and make posts. Users can seamlessly sign in to their existing accounts or register for new ones, ensuring a protected login experience. With basic profiles, users can facilitate connections and engagement within the community. They can also share their thoughts, insights, and updates by creating and publishing posts, fostering communication and knowledge sharing, similar to LinkedIn's newsfeed.",
+        "A simplified professional networking platform featuring secure authentication, basic user profiles, and a real‑time post feed. Built with React for the frontend and Firebase for auth and data storage, users can sign in or register, customize their profiles, and share updates—fostering community engagement in a LinkedIn‑style newsfeed.",
       technologyStack: "React, Firebase",
       url: "https://linkedin-clone-28da2.web.app/",
     },
     {
-      id: 3,
+      id: 7,
       name: "Tech Time",
       design: TechTimeDesign,
       description:
-        "The Tech Time Landing Page is a captivating and responsive web portal designed and constructed using React and seamlessly hosted on Netlify. This elegant landing page is divided into distinct sections, including a visually striking hero section that instantly captures visitors' attention, an informative 'About Us' section, a comprehensive showcase of available courses, and a testimonials section that highlights the positive experiences of users. The landing page is adorned with an aesthetically pleasing header and footer, enhancing the overall user experience. The project's meticulous design ensures that it adapts flawlessly to various devices and screen sizes, providing an engaging and user-friendly interface for all visitors.",
-      technologyStack: "React and Netlify",
+        "A captivating, responsive landing page for an online course portal, built with React and hosted on Netlify. Features include a hero section, About Us, course showcases, and testimonials—each designed for seamless adaptation across all device sizes and an engaging user journey from first click to call‑to‑action.",
+      technologyStack: "React, Netlify",
       url: "https://tech-time-web.netlify.app/",
     },
     {
-      id: 4,
+      id: 8,
       name: "Snap",
       design: SnapDesign,
       description:
-        "The Snap Landing Page showcases a stunning and responsive design that takes inspiration from Frontend Mentor, known for its top-notch web development challenges. This project is elegantly minimalistic, featuring a header and a hero section that seamlessly adapts to various screen sizes. The hero section, in particular, is a visual masterpiece that captures attention with its clean aesthetics and responsiveness. The 'Snap' landing page reflects your commitment to creating user-friendly and visually appealing web designs. Its simplicity and responsiveness make it an ideal choice for conveying key information efficiently and delivering an exceptional user experience.",
-      technologyStack: "Html, Css and JavaScript",
+        "A minimalist, Frontend Mentor‑inspired landing page showcasing a header and hero section optimized for responsiveness. Built with plain HTML, CSS, and JavaScript, Snap delivers a clean, attention‑grabbing UI that adapts flawlessly to various screen sizes.",
+      technologyStack: "HTML, CSS, JavaScript",
       url: "https://delightful-snickerdoodle-9283a7.netlify.app/",
     },
-    // {
-    //   id: 5,
-    //   name: "Todo App",
-    //   design: LinkedInDesign,
-    //   description:
-    //     "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of themoviedb API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories, including Netflix Originals, top-rated, trending now, action, comedy, horror, romance, and documentaries, ensuring a diverse selection for every taste. Real-time updates from the themoviedb API keep users informed with the latest and most current movie content. The user interface is designed for ease of navigation and a visually appealing experience, allowing users to effortlessly search for and discover their favorite movies. The project is hosted on Firebase, providing reliable and scalable hosting to ensure users can access the platform without interruptions.",
-    //   technologyStack: "",
-    //   url: "",
-    // },
-    // {
-    //   id: 6,
-    //   name: "UPS clone",
-    //   design: LinkedInDesign,
-    //   description:
-    //     "The Netflix Clone is a dynamic and user-friendly movie streaming web application that provides an immersive experience for users to explore and watch a wide variety of movies. Built using modern web technologies, including React for the frontend and Firebase for hosting, this project leverages the power of themoviedb API to offer up-to-date information and a vast library of movies. The platform offers multiple movie categories, including Netflix Originals, top-rated, trending now, action, comedy, horror, romance, and documentaries, ensuring a diverse selection for every taste. Real-time updates from the themoviedb API keep users informed with the latest and most current movie content. The user interface is designed for ease of navigation and a visually appealing experience, allowing users to effortlessly search for and discover their favorite movies. The project is hosted on Firebase, providing reliable and scalable hosting to ensure users can access the platform without interruptions.",
-    //   technologyStack: "",
-    //   url: "",
-    // },
   ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -87,22 +102,24 @@ const Index = (props: Props) => {
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-[20px] md:p-44 min-h-screen"
             key={i}
           >
-            <motion.div
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <Image
-                className="
+            {project.design && (
+              <motion.div
+                initial={{ y: -100, opacity: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <Image
+                  className="
               max-w-[200px]
               md:max-w-[350px]
               mx-auto object-contain"
-                src={project.design}
-                alt=""
-              ></Image>
-            </motion.div>
+                  src={project.design}
+                  alt=""
+                ></Image>
+              </motion.div>
+            )}
             <div className="space-y-5 md:px-10 max-w-6xl">
               <h4 className="text-2xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">

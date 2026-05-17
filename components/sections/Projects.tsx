@@ -4,7 +4,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 const PROJECTS = [
   {
-    name: "Ka'bo",
+    name: 'Kaabo',
     tagline: 'Student housing fintech platform',
     description:
       'Fintech platform helping students access housing with zero hidden fees, guarantor support, and rent-reporting to build credit. Built the frontend from scratch — property search, tenant dashboards, and a multi-step onboarding flow.',

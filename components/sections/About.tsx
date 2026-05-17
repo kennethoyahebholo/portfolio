@@ -112,9 +112,8 @@ export default function About() {
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] text-[var(--text-secondary)] mb-10">
-              Currently based in Lagos and open to relocating to Europe. Looking for a
-              senior role where frontend quality is taken seriously — visa sponsorship
-              welcome.
+              Looking for a senior role where frontend quality is taken seriously.
+              Currently based in Lagos and open to relocating to Europe — visa sponsorship welcome.
             </p>
 
             {/* Social links row */}

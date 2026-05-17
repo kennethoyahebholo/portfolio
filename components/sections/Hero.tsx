@@ -135,7 +135,7 @@ export default function Hero() {
           <p className="text-[1rem] sm:text-[1.0625rem] text-[var(--text-secondary)] leading-[1.65] max-w-[36rem] mx-auto mb-10">
             I build fast, production-grade interfaces for{' '}
             <span className="text-[var(--text-primary)] font-medium">fintech</span> and{' '}
-            <span className="text-[var(--text-primary)] font-medium">early-stage</span>{' '}
+            <span className="text-[var(--text-primary)] font-medium">AI-native</span>{' '}
             products.
           </p>
 

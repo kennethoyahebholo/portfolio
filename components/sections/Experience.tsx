@@ -3,17 +3,6 @@ import { motion, useInView } from 'framer-motion'
 
 const EXPERIENCE = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Grey Invent Technology',
-    period: 'Sep 2025 – Dec 2025',
-    type: 'Contract',
-    location: 'Wilmington, Delaware · Remote',
-    bullets: [
-      'Led frontend development for client-facing web applications working remotely with a US-based team.',
-      'Contributed to architecture decisions and code reviews to maintain quality across a fast-moving engagement.',
-    ],
-  },
-  {
     role: 'Software Engineer',
     company: 'VFD Tech Limited',
     period: 'Apr 2025 – Aug 2025',
@@ -21,21 +10,9 @@ const EXPERIENCE = [
     location: 'Lagos, Nigeria · Remote',
     bullets: [
       'Built VBiz, a white-label multi-tenant corporate banking platform supporting bulk transfers, bill payments, and role-based user management for MSMEs across Nigeria.',
-      'Delivered a beneficiary management system and recurring transaction scheduler that cut repetitive data entry by 80% for teams handling payroll, vendor payments, and utility bills.',
+      'Built a beneficiary management system and recurring transaction scheduler that cut repetitive data entry by 80% for payroll, vendor payments, and utility bills.',
       'Built multi-tenant company-switching so business owners could manage multiple corporate accounts from one login with zero data crossover.',
       'Created real-time financial dashboards giving clients instant visibility into cash flow and transaction patterns.',
-    ],
-  },
-  {
-    role: 'Frontend Engineer',
-    company: 'Forcythe',
-    period: 'Feb 2025 – Apr 2025',
-    type: 'Contract',
-    location: 'Lagos, Nigeria · Hybrid',
-    bullets: [
-      'Launched DC Innovate and Apapa LGA websites using Next.js and Tailwind CSS.',
-      'Reduced bundle size by 40% through code splitting and lazy loading, achieving sub-2s first contentful paint.',
-      'Achieved full WCAG AA accessibility compliance across both products.',
     ],
   },
   {
@@ -45,7 +22,9 @@ const EXPERIENCE = [
     type: 'Contract',
     location: 'Delaware, United States · Remote',
     bullets: [
-      'Built and optimised web applications using Next.js, hitting sub-2s FCP and reducing bundle size by 40%.',
+      'Built and maintained Next.js web applications with real-time data feeds powered by WebSocket integrations.',
+      'Engineered REST API integrations and optimised rendering performance — reducing bundle size by 40% and hitting sub-2s FCP.',
+      'Led codebase refactoring that cleared significant technical debt and established code standards for the team.',
       'Achieved full WCAG AA accessibility compliance across all delivered projects.',
     ],
   },
@@ -56,7 +35,7 @@ const EXPERIENCE = [
     type: 'Full-time',
     location: 'Toronto, Canada · Remote',
     bullets: [
-      'Cut first-contentful-paint from 3.2s to 1.9s and improved time-to-interactive by 40% across payfi.ca and kaabo.co.',
+      'Cut first-contentful-paint from 3.2s to 1.9s and improved time-to-interactive by 40% across payfi.ca and kaabo.ai.',
       'Designed a GraphQL data layer that reduced average payload sizes by 50%, improving experience on mobile connections.',
       'Took on-time release delivery from 65% to 92% across 10 to 12 major releases per year.',
       'Set up ESLint, pre-commit hooks, and structured peer reviews that reduced production regressions.',

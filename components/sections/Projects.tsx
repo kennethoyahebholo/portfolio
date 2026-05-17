@@ -27,10 +27,10 @@ const PROJECTS = [
     name: 'Sprekar',
     tagline: 'AI-powered real-time translation',
     description:
-      'AI-powered platform delivering real-time speech translation for live events and multilingual audiences. Contributed to the frontend — low-latency audio streaming interfaces, real-time state management, and WebSocket integrations.',
-    stack: ['Next.js', 'WebSockets', 'TypeScript', 'Tailwind CSS'],
+      'Built the backend from scratch and contributed to the frontend. Backend covers live speech processing with Google Speech-to-Text, OpenAI-powered translation pipelines, and WebSocket infrastructure for real-time audio streaming, all served via Express and Node.js APIs. Frontend work includes low-latency audio streaming interfaces and real-time state management.',
+    stack: ['Node.js', 'Express', 'Google STT', 'OpenAI', 'WebSockets', 'Next.js', 'TypeScript'],
     url: 'https://sprekar.com',
-    metrics: [{ value: '3', label: 'Live products' }, { value: '5+', label: 'Years shipped' }],
+    metrics: [{ value: '3', label: 'Live products' }, { value: '2', label: 'Years shipped' }],
     accent: false,
   },
 ]

@@ -15,14 +15,15 @@ export default function Home() {
         <title>Kenneth Oyahebholo — Senior Frontend Engineer</title>
         <meta
           name="description"
-          content="Senior Frontend Engineer specialising in fast, precise, production-grade interfaces for fintech and AI-native products."
+          content="Senior Frontend Engineer with 5+ years building production interfaces for fintech products. React, Next.js, TypeScript."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Kenneth Oyahebholo — Senior Frontend Engineer" />
         <meta
           property="og:description"
-          content="I build fast, precise, production-grade interfaces for fintech and AI-native products."
+          content="Senior Frontend Engineer with 5+ years building production interfaces for fintech products. React, Next.js, TypeScript."
         />
+        <link rel="canonical" href="https://kennethoyahebholo.com" />
       </Head>
 
       <main>

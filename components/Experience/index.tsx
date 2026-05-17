@@ -47,7 +47,7 @@ const myExperience = [
     third_summary:
       "Built a modular theming system with Tailwind CSS—delivering consistent brand identity and rapid style iterations.",
     fourth_summary:
-      "Led Next.js‑driven redesigns of payfi.ca and kaabo.co—applying modern UX/UI principles to elevate user engagement.",
+      "Led Next.js‑driven redesigns of payfi.ca and kaabo.ai—applying modern UX/UI principles to elevate user engagement.",
     fifth_summary:
       "Collaborated cross‑functionally in agile environments—troubleshooting complex bugs, prioritizing features, and ensuring on‑time releases.",
   },

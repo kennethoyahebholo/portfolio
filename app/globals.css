@@ -16,13 +16,10 @@
   --glass-highlight-side: rgba(255, 255, 255, 0.06);
   --glass-blur: 24px;
   --glass-blur-strong: 44px;
-
-  /* Accent — warm violet-blue */
-  --accent: #4338CA;
-  --accent-light: #5B7FFF;
-  --accent-glow: rgba(91, 127, 255, 0.22);
-  --accent-glow-strong: rgba(91, 127, 255, 0.40);
-
+  --accent: #1A56DB;
+  --accent-light: #4F88FF;
+  --accent-glow: rgba(26, 86, 219, 0.22);
+  --accent-glow-strong: rgba(26, 86, 219, 0.40);
   --base-bg: #07090f;
   --text-primary: #EEF2FF;
   --text-secondary: rgba(238, 242, 255, 0.55);
@@ -55,32 +52,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
-  line-height: 1.6;
 }
 
 /* =========================================
    SCROLLBAR
    ========================================= */
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 ::-webkit-scrollbar-thumb {
-  background: rgba(91, 127, 255, 0.35);
+  background: rgba(79, 136, 255, 0.35);
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(91, 127, 255, 0.55); }
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 136, 255, 0.55);
+}
 
 /* =========================================
    TEXT SELECTION
    ========================================= */
 
 ::selection {
-  background: rgba(91, 127, 255, 0.28);
+  background: rgba(26, 86, 219, 0.28);
   color: var(--text-primary);
 }
 
 /* =========================================
    LIQUID GLASS SYSTEM
+
+   Three tiers:
+   .glass        — standard cards, nav on scroll
+   .glass-strong — hero card, featured elements
+   .glass-accent — accent-colored glass (blue tint)
    ========================================= */
 
 .glass {
@@ -89,9 +96,13 @@ body {
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%) brightness(1.04);
   border: 1px solid var(--glass-border);
   box-shadow:
+    /* Top edge specular highlight — the key Liquid Glass detail */
     inset 0 1px 0 0 var(--glass-highlight),
+    /* Left edge subtle highlight */
     inset 1px 0 0 0 var(--glass-highlight-side),
+    /* Bottom edge shadow */
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.08),
+    /* Outer drop shadow */
     0 20px 48px -12px rgba(0, 0, 0, 0.48),
     0 0 0 0.5px rgba(0, 0, 0, 0.10);
 }
@@ -107,9 +118,13 @@ body {
   -webkit-backdrop-filter: blur(var(--glass-blur-strong)) saturate(200%) brightness(1.06);
   border: 1px solid var(--glass-border-strong);
   box-shadow:
+    /* Top edge specular highlight — stronger on featured cards */
     inset 0 1px 0 0 rgba(255, 255, 255, 0.26),
+    /* Left edge subtle highlight */
     inset 1px 0 0 0 rgba(255, 255, 255, 0.08),
+    /* Bottom edge shadow */
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.12),
+    /* Outer drop shadow — deeper for hero card */
     0 40px 80px -20px rgba(0, 0, 0, 0.60),
     0 8px 24px -6px rgba(0, 0, 0, 0.30),
     0 0 0 0.5px rgba(0, 0, 0, 0.15);
@@ -118,18 +133,19 @@ body {
 .glass-accent {
   background: linear-gradient(
     135deg,
-    rgba(67, 56, 202, 0.18) 0%,
-    rgba(67, 56, 202, 0.06) 100%
+    rgba(26, 86, 219, 0.18) 0%,
+    rgba(26, 86, 219, 0.06) 100%
   );
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(91, 127, 255, 0.28);
+  border: 1px solid rgba(79, 136, 255, 0.28);
   box-shadow:
-    inset 0 1px 0 0 rgba(91, 127, 255, 0.28),
-    0 8px 32px -8px rgba(67, 56, 202, 0.28),
-    0 0 0 0.5px rgba(67, 56, 202, 0.12);
+    inset 0 1px 0 0 rgba(79, 136, 255, 0.28),
+    0 8px 32px -8px rgba(26, 86, 219, 0.28),
+    0 0 0 0.5px rgba(26, 86, 219, 0.12);
 }
 
+/* Hover interaction layer */
 .glass-hover {
   transition:
     background 0.28s cubic-bezier(0.23, 1, 0.32, 1),
@@ -173,15 +189,15 @@ body {
     box-shadow 0.2s ease,
     transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow:
-    0 0 0 1px rgba(91, 127, 255, 0.50),
-    0 8px 24px -6px rgba(91, 127, 255, 0.55);
+    0 0 0 1px rgba(26, 86, 219, 0.50),
+    0 8px 24px -6px rgba(26, 86, 219, 0.55);
 }
 
 .btn-primary:hover {
-  background: #5567FF;
+  background: #1E63F5;
   box-shadow:
-    0 0 0 1px rgba(91, 127, 255, 0.70),
-    0 12px 32px -6px rgba(91, 127, 255, 0.65);
+    0 0 0 1px rgba(26, 86, 219, 0.70),
+    0 12px 32px -6px rgba(26, 86, 219, 0.65);
   transform: translateY(-1px);
 }
 
@@ -229,35 +245,10 @@ body {
 
 .section-heading {
   font-size: clamp(2rem, 4vw, 2.875rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
   color: var(--text-primary);
-}
-
-/* =========================================
-   DOT GRID MOTIF
-   Repeatable brand element applied to section
-   heading wrappers via .dot-motif class.
-   ========================================= */
-
-.dot-motif {
-  position: relative;
-  overflow: visible;
-}
-
-.dot-motif::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 88px;
-  height: 60px;
-  background-image: radial-gradient(circle, rgba(91, 127, 255, 0.22) 1px, transparent 1px);
-  background-size: 14px 14px;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom right, rgba(0,0,0,0.6), transparent);
-  -webkit-mask-image: linear-gradient(to bottom right, rgba(0,0,0,0.6), transparent);
 }
 
 /* =========================================
@@ -282,8 +273,8 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: var(--radius-pill);
-  background: rgba(91, 127, 255, 0.10);
-  border: 1px solid rgba(91, 127, 255, 0.20);
+  background: rgba(79, 136, 255, 0.10);
+  border: 1px solid rgba(79, 136, 255, 0.20);
   color: var(--accent-light);
   white-space: nowrap;
 }
@@ -301,8 +292,8 @@ body {
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(91, 127, 255, 0.30) 15%,
-    rgba(91, 127, 255, 0.30) 85%,
+    rgba(79, 136, 255, 0.30) 15%,
+    rgba(79, 136, 255, 0.30) 85%,
     transparent
   );
 }
@@ -315,33 +306,8 @@ body {
   height: 9px;
   border-radius: 50%;
   background: var(--accent-light);
-  box-shadow: 0 0 0 3px rgba(91, 127, 255, 0.20), 0 0 12px rgba(91, 127, 255, 0.40);
+  box-shadow: 0 0 0 3px rgba(79, 136, 255, 0.20), 0 0 12px rgba(79, 136, 255, 0.40);
 }
-
-/* =========================================
-   KEYFRAME ANIMATIONS
-   ========================================= */
-
-@keyframes orbMove1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(80px, -60px) scale(1.08); }
-  66% { transform: translate(-40px, 40px) scale(0.95); }
-}
-
-@keyframes orbMove2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-60px, 70px) scale(0.92); }
-  66% { transform: translate(70px, -40px) scale(1.12); }
-}
-
-@keyframes orbMove3 {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-50px, -55px); }
-}
-
-.animate-orb-1 { animation: orbMove1 18s ease-in-out infinite; }
-.animate-orb-2 { animation: orbMove2 22s ease-in-out infinite; }
-.animate-orb-3 { animation: orbMove3 16s ease-in-out infinite; }
 
 /* =========================================
    FOCUS STYLES (accessibility)

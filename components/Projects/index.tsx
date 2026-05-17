@@ -22,9 +22,9 @@ const Index = (props: Props) => {
       id: 2,
       name: "Ka’bo",
       description:
-        "Next.js & Tailwind CSS build of kaabo.co, a student housing marketplace with multilingual support and zero hidden fees. Features include budget‑driven property search, guarantor support for international students, roommate matching, maintenance requests, and rewards for on‑time rent. Includes dynamic blog feeds, tenant & landlord dashboards, and social proof from student testimonials to drive trust and engagement.",
+        "Next.js & Tailwind CSS build of kaabo.ai, a student housing marketplace with multilingual support and zero hidden fees. Features include budget‑driven property search, guarantor support for international students, roommate matching, maintenance requests, and rewards for on‑time rent. Includes dynamic blog feeds, tenant & landlord dashboards, and social proof from student testimonials to drive trust and engagement.",
       technologyStack: "Next.js, Tailwind CSS",
-      url: "https://kaabo.co",
+      url: "https://kaabo.ai",
     },
     {
       id: 3,

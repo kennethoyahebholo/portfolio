@@ -52,7 +52,7 @@ const EXPERIENCE = [
   {
     role: 'Frontend Engineer',
     company: 'Payfi',
-    period: 'Nov 2022 – Aug 2025',
+    period: 'Sep 2022 – Aug 2025',
     type: 'Full-time',
     location: 'Toronto, Canada · Remote',
     bullets: [

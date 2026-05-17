@@ -93,13 +93,13 @@ export default function About() {
           >
             <p className="text-[1.0625rem] leading-[1.75] text-[var(--text-secondary)] mb-6">
               I&apos;m a Senior Frontend Engineer with five-plus years building production
-              software, most of it in{' '}
-              <span className="text-[var(--text-primary)] font-medium">
-                fintech
-              </span>{' '}
-              where speed, accuracy, and reliability are non-negotiable. I&apos;ve built
-              design systems from scratch, owned entire frontend codebases solo, and
-              shipped features used by real people in high-stakes financial contexts.
+              software in{' '}
+              <span className="text-[var(--text-primary)] font-medium">fintech</span> and{' '}
+              <span className="text-[var(--text-primary)] font-medium">AI products</span>
+              {' '}— most recently contributing to Sprekar, an AI-powered real-time
+              translation platform. I&apos;ve built design systems from scratch, owned
+              entire frontend codebases solo, and shipped features used by real people
+              in high-stakes financial contexts.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] text-[var(--text-secondary)] mb-6">
@@ -112,7 +112,9 @@ export default function About() {
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] text-[var(--text-secondary)] mb-10">
-              Looking for a senior role where frontend quality is taken seriously.
+              Currently based in Lagos and open to relocating to Europe. Looking for a
+              senior role where frontend quality is taken seriously — visa sponsorship
+              welcome.
             </p>
 
             {/* Social links row */}

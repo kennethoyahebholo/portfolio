@@ -93,11 +93,7 @@ export default function Metrics() {
                 className="text-[3rem] font-bold tracking-[-0.04em] leading-none"
                 style={{ color: 'var(--accent-light)' }}
               >
-                {inView ? (
-                  <AnimatedCounter value={m.value} suffix={m.suffix} duration={1.8} />
-                ) : (
-                  <span>0{m.suffix}</span>
-                )}
+                <AnimatedCounter value={m.value} suffix={m.suffix} duration={1.8} />
               </div>
               <p className="text-[1rem] font-semibold text-[var(--text-primary)] leading-snug">
                 {m.label}

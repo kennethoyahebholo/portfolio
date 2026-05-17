@@ -5,9 +5,9 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 const PROJECTS = [
   {
     name: "Ka'bo",
-    tagline: 'Student housing marketplace',
+    tagline: 'Student housing fintech platform',
     description:
-      'Student housing marketplace with multilingual support and zero hidden fees. Features budget-driven property search, guarantor support for international students, roommate matching, maintenance requests, and rewards for on-time rent.',
+      'Fintech platform helping students access housing with zero hidden fees, guarantor support, and rent-reporting to build credit. Built the frontend from scratch — property search, tenant dashboards, and a multi-step onboarding flow.',
     stack: ['Next.js', 'Tailwind CSS', 'GraphQL', 'TypeScript'],
     url: 'https://kaabo.ai',
     metrics: [{ value: '40%', label: 'TTI improvement' }, { value: '50%', label: 'Payload reduction' }],
@@ -15,9 +15,9 @@ const PROJECTS = [
   },
   {
     name: 'VBiz by VBank',
-    tagline: 'Business banking dashboard',
+    tagline: 'White-label corporate banking platform',
     description:
-      'Business banking platform for VBank. Built the design system, financial dashboards, and transactional flows from the ground up.',
+      'Multi-tenant corporate banking platform for VFD Microfinance Bank — bulk transfers, bill payments, role-based access, and real-time financial dashboards for MSMEs across Nigeria. Built the full frontend from the ground up.',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'REST APIs'],
     url: 'https://business.vbank.ng',
     metrics: [{ value: '92%', label: 'On-time delivery' }, { value: '80%', label: 'Less manual ops' }],
@@ -25,9 +25,9 @@ const PROJECTS = [
   },
   {
     name: 'Sprekar',
-    tagline: 'SaaS platform for event speakers',
+    tagline: 'AI-powered real-time translation',
     description:
-      'Speaker management platform connecting event organisers with professional speakers. Built real-time booking flows and WebSocket integrations.',
+      'AI-powered platform delivering real-time speech translation for live events and multilingual audiences. Contributed to the frontend — low-latency audio streaming interfaces, real-time state management, and WebSocket integrations.',
     stack: ['Next.js', 'WebSockets', 'TypeScript', 'Tailwind CSS'],
     url: 'https://sprekar.com',
     metrics: [{ value: '3', label: 'Live products' }, { value: '5+', label: 'Years shipped' }],

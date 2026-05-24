@@ -33,6 +33,26 @@ const PROJECTS = [
     metrics: [{ value: '3', label: 'Live products' }, { value: '2', label: 'Years shipped' }],
     accent: false,
   },
+  {
+    name: 'Vint',
+    tagline: 'Soil intelligence beneath every vine',
+    description:
+      'Built the frontend for a precision viticulture platform that deploys lightweight robots across vineyards, taking thousands of subsurface soil readings per vine. A real-time digital twin models biological activity, predicts optimal intervention windows, and surfaces a 0–100 health score per zone — giving growers laser-targeted recommendations at 1% of traditional lab cost.',
+    stack: ['Next.js', 'TypeScript', 'React', 'Data Visualization'],
+    url: 'https://www.vint.earth',
+    metrics: [{ value: '100×', label: 'more field detail' }, { value: '1%', label: 'of lab test cost' }],
+    accent: false,
+  },
+  {
+    name: 'Farmgo',
+    tagline: 'Next-gen agri-tech across 7,600+ hectares',
+    description:
+      'Built the frontend for a smart farming platform managing 7,600+ hectares with drones, IoT sensors, and AI tooling. Shipped dashboards for autonomous irrigation, solar-powered pest control, AI weather forecasting, and an integrated crop monitoring hub — a single command center that converges every data stream and drove a 30% yield improvement.',
+    stack: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'IoT Integrations'],
+    url: 'https://farmgo.co',
+    metrics: [{ value: '30%', label: 'yield increase' }, { value: '7,600+', label: 'hectares managed' }],
+    accent: false,
+  },
 ]
 
 const EASE = [0.23, 1, 0.32, 1] as const

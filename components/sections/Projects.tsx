@@ -37,8 +37,8 @@ const PROJECTS = [
     name: 'Vint',
     tagline: 'Soil intelligence beneath every vine',
     description:
-      'Built the frontend for a precision viticulture platform that deploys lightweight robots across vineyards, taking thousands of subsurface soil readings per vine. A real-time digital twin models biological activity, predicts optimal intervention windows, and surfaces a 0–100 health score per zone — giving growers laser-targeted recommendations at 1% of traditional lab cost.',
-    stack: ['Next.js', 'TypeScript', 'React', 'Data Visualization'],
+      'Built the full stack for a precision viticulture platform. On the backend, wired a physical soil-scanning robot to Firebase RTDB — streaming live subsurface readings per probe in real time. Layered a weather API on top to forecast soil behaviour day-by-day for each probe location, powering a digital twin that predicts optimal intervention windows. On the frontend, turned all that data into a 0–100 per-zone health score with laser-targeted grower recommendations.',
+    stack: ['Next.js', 'TypeScript', 'Firebase RTDB', 'Weather API', 'React', 'Node.js'],
     url: 'https://www.vint.earth',
     metrics: [{ value: '100×', label: 'more field detail' }, { value: '1%', label: 'of lab test cost' }],
     accent: false,

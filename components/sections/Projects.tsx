@@ -50,7 +50,7 @@ const PROJECTS = [
       'Built the frontend for a smart farming platform managing 7,600+ hectares with drones, IoT sensors, and AI tooling. Shipped dashboards for autonomous irrigation, solar-powered pest control, AI weather forecasting, and an integrated crop monitoring hub — a single command center that converges every data stream and drove a 30% yield improvement.',
     stack: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'IoT Integrations'],
     url: 'https://farmgo.co',
-    metrics: [{ value: '30%', label: 'yield increase' }, { value: '7,600+', label: 'hectares managed' }],
+    metrics: [{ value: '30%', label: 'yield increase' }, { value: '7.6K+', label: 'hectares managed' }],
     accent: false,
   },
 ]

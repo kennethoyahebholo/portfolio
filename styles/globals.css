@@ -344,6 +344,64 @@ body {
 .animate-orb-3 { animation: orbMove3 16s ease-in-out infinite; }
 
 /* =========================================
+   ANTIGRAVITY HERO PATTERN
+   ========================================= */
+
+@keyframes floatUp {
+  0%   { transform: translateY(0);       opacity: 0; }
+  8%   { opacity: 1; }
+  85%  { opacity: 0.75; }
+  95%  { opacity: 0; }
+  100% { transform: translateY(-110vh);  opacity: 0; }
+}
+
+@keyframes levitate {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.floating-tech-label {
+  position: absolute;
+  bottom: -50px;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  background: rgba(91, 127, 255, 0.07);
+  border: 1px solid rgba(91, 127, 255, 0.16);
+  color: rgba(165, 180, 252, 0.65);
+  white-space: nowrap;
+  animation: floatUp linear infinite;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+  cursor: default;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.floating-tech-label:hover {
+  background: rgba(91, 127, 255, 0.14);
+  border-color: rgba(91, 127, 255, 0.34);
+  color: rgba(165, 180, 252, 0.95);
+  box-shadow: 0 0 14px rgba(91, 127, 255, 0.22);
+}
+
+.floating-particle {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: rgba(91, 127, 255, 0.35);
+  box-shadow: 0 0 4px rgba(91, 127, 255, 0.25);
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+
+.hero-card-levitate {
+  animation: levitate 5s 1.5s ease-in-out infinite;
+}
+
+/* =========================================
    FOCUS STYLES (accessibility)
    ========================================= */
 

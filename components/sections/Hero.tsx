@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useRef, useEffect } from 'react'
+import { motion, useSpring } from 'framer-motion'
 import { ArrowDownIcon } from '@heroicons/react/24/outline'
 
 const FADE_UP = {
@@ -8,6 +9,73 @@ const FADE_UP = {
     y: 0,
     transition: { duration: 0.7, delay, ease: [0.23, 1, 0.32, 1] as const },
   }),
+}
+
+const FLOATING_TECH = [
+  { label: 'React', x: '3%', duration: 14, delay: -2 },
+  { label: 'Node.js', x: '7%', duration: 17, delay: -8 },
+  { label: 'AWS', x: '1.5%', duration: 20, delay: -14 },
+  { label: 'Redux', x: '9%', duration: 16, delay: -5 },
+  { label: 'TypeScript', x: '87%', duration: 15, delay: -4 },
+  { label: 'GraphQL', x: '83%', duration: 18, delay: -10 },
+  { label: 'Next.js', x: '90%', duration: 13, delay: -1 },
+  { label: 'Tailwind', x: '85%', duration: 21, delay: -16 },
+]
+
+const PARTICLES = [
+  { x: '22%', size: 3, duration: 9, delay: -3 },
+  { x: '38%', size: 4, duration: 12, delay: -7 },
+  { x: '50%', size: 2.5, duration: 10, delay: -1 },
+  { x: '63%', size: 3, duration: 11, delay: -5 },
+  { x: '74%', size: 4, duration: 8, delay: -2 },
+]
+
+const REPEL_THRESHOLD = 130
+const REPEL_STRENGTH = 55
+
+function FloatingLabel({ tech }: { tech: (typeof FLOATING_TECH)[number] }) {
+  const outerRef = useRef<HTMLDivElement>(null)
+  const springOpts = { stiffness: 180, damping: 18 }
+  const repelX = useSpring(0, springOpts)
+  const repelY = useSpring(0, springOpts)
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      if (!outerRef.current) return
+      const { left, top, width, height } = outerRef.current.getBoundingClientRect()
+      const cx = left + width / 2
+      const cy = top + height / 2
+      const dx = e.clientX - cx
+      const dy = e.clientY - cy
+      const dist = Math.sqrt(dx * dx + dy * dy)
+      if (dist < REPEL_THRESHOLD && dist > 0) {
+        const f = (REPEL_THRESHOLD - dist) / REPEL_THRESHOLD
+        repelX.set(-(dx / dist) * f * REPEL_STRENGTH)
+        repelY.set(-(dy / dist) * f * REPEL_STRENGTH)
+      } else {
+        repelX.set(0)
+        repelY.set(0)
+      }
+    }
+    window.addEventListener('mousemove', onMove)
+    return () => window.removeEventListener('mousemove', onMove)
+  }, [repelX, repelY])
+
+  return (
+    <div
+      ref={outerRef}
+      className="floating-tech-label hidden md:inline-flex"
+      style={{
+        left: tech.x,
+        animationDuration: `${tech.duration}s`,
+        animationDelay: `${tech.delay}s`,
+      }}
+    >
+      <motion.span className="inline-block" style={{ x: repelX, y: repelY }}>
+        {tech.label}
+      </motion.span>
+    </div>
+  )
 }
 
 const METRIC_CHIPS = [
@@ -77,6 +145,26 @@ export default function Hero() {
             backgroundSize: '72px 72px',
           }}
         />
+
+        {/* Floating tech labels — antigravity + cursor repulsion */}
+        {FLOATING_TECH.map((tech) => (
+          <FloatingLabel key={tech.label} tech={tech} />
+        ))}
+
+        {/* Rising particles */}
+        {PARTICLES.map((p, i) => (
+          <div
+            key={i}
+            className="floating-particle"
+            style={{
+              left: p.x,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              animationDuration: `${p.duration}s`,
+              animationDelay: `${p.delay}s`,
+            }}
+          />
+        ))}
       </div>
 
       {/* ── Main content ── */}
@@ -107,8 +195,8 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={0.28}
-          className="glass-strong rounded-[28px] px-8 py-12 sm:px-12 sm:py-14 mb-6"
         >
+        <div className="hero-card-levitate glass-strong rounded-[28px] px-8 py-12 sm:px-12 sm:py-14 mb-6">
           {/* Name */}
           <h1 className="text-[2.5rem] sm:text-[3.25rem] md:text-[3.75rem] font-bold tracking-[-0.04em] text-[var(--text-primary)] leading-[1.02] mb-4">
             Kenneth{' '}
@@ -148,6 +236,7 @@ export default function Hero() {
               Contact Me
             </a>
           </div>
+        </div>
         </motion.div>
 
         {/* Metric chips */}

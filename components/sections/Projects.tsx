@@ -1,5 +1,5 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useRef, useCallback } from 'react'
+import { motion, useInView, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 const PROJECTS = [
@@ -64,84 +64,123 @@ function ProjectCard({
   project: (typeof PROJECTS)[number]
   index: number
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const inViewRef = useRef<HTMLDivElement>(null)
+  const cardRef = useRef<HTMLDivElement>(null)
+  const inView = useInView(inViewRef, { once: true, margin: '-60px' })
+
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [6, -6]), { stiffness: 300, damping: 30 })
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-6, 6]), { stiffness: 300, damping: 30 })
+  const glareX = useTransform(mouseX, [-0.5, 0.5], ['20%', '80%'])
+  const glareY = useTransform(mouseY, [-0.5, 0.5], ['20%', '80%'])
+  const glareOpacity = useSpring(0, { stiffness: 200, damping: 25 })
+  const glareBg = useMotionTemplate`radial-gradient(circle at ${glareX} ${glareY}, rgba(255,255,255,0.10) 0%, transparent 55%)`
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return
+    const { left, top, width, height } = cardRef.current.getBoundingClientRect()
+    mouseX.set((e.clientX - left) / width - 0.5)
+    mouseY.set((e.clientY - top) / height - 0.5)
+    glareOpacity.set(1)
+  }, [mouseX, mouseY, glareOpacity])
+
+  const handleMouseLeave = useCallback(() => {
+    mouseX.set(0)
+    mouseY.set(0)
+    glareOpacity.set(0)
+  }, [mouseX, mouseY, glareOpacity])
 
   return (
     <motion.div
-      ref={ref}
+      ref={inViewRef}
       initial={{ opacity: 0, y: 28 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: EASE }}
-      className={`glass-hover rounded-[22px] p-7 sm:p-9 ${project.accent ? 'glass-accent' : 'glass'}`}
+      style={{ perspective: 900 }}
     >
-      <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start gap-3 mb-1.5">
-            <h3 className="text-[1.25rem] font-bold tracking-[-0.02em] text-[var(--text-primary)]">
-              {project.name}
-            </h3>
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-[3px] flex-shrink-0 text-[var(--text-muted)] hover:text-[var(--accent-light)] transition-colors duration-200"
-              aria-label={`Visit ${project.name} (opens in new tab)`}
+      <motion.div
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        className={`relative glass-hover rounded-[22px] p-7 sm:p-9 ${project.accent ? 'glass-accent' : 'glass'}`}
+      >
+        <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+          {/* Content */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-start gap-3 mb-1.5">
+              <h3 className="text-[1.25rem] font-bold tracking-[-0.02em] text-[var(--text-primary)]">
+                {project.name}
+              </h3>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-[3px] flex-shrink-0 text-[var(--text-muted)] hover:text-[var(--accent-light)] transition-colors duration-200"
+                aria-label={`Visit ${project.name} (opens in new tab)`}
+              >
+                <ArrowTopRightOnSquareIcon className="w-4 h-4" aria-hidden="true" />
+              </a>
+            </div>
+
+            <p
+              className="text-[0.875rem] font-medium mb-4"
+              style={{ color: 'var(--accent-light)' }}
             >
-              <ArrowTopRightOnSquareIcon className="w-4 h-4" aria-hidden="true" />
-            </a>
+              {project.tagline}
+            </p>
+
+            <p className="text-[0.9375rem] text-[var(--text-secondary)] leading-[1.7] mb-6">
+              {project.description}
+            </p>
+
+            {/* Stack pills */}
+            <div className="flex flex-wrap gap-2">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-[0.75rem] font-medium px-3 py-1 rounded-full"
+                  style={{
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.10)',
+                    color: 'var(--text-secondary)',
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
 
-          <p
-            className="text-[0.875rem] font-medium mb-4"
-            style={{ color: 'var(--accent-light)' }}
-          >
-            {project.tagline}
-          </p>
-
-          <p className="text-[0.9375rem] text-[var(--text-secondary)] leading-[1.7] mb-6">
-            {project.description}
-          </p>
-
-          {/* Stack pills */}
-          <div className="flex flex-wrap gap-2">
-            {project.stack.map((tech) => (
-              <span
-                key={tech}
-                className="text-[0.75rem] font-medium px-3 py-1 rounded-full"
-                style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.10)',
-                  color: 'var(--text-secondary)',
-                }}
+          {/* Metric pair */}
+          <div className="flex sm:flex-col gap-3 sm:min-w-[140px]">
+            {project.metrics.map((m) => (
+              <div
+                key={m.label}
+                className="flex-1 sm:flex-none glass rounded-[14px] px-4 py-3 text-center"
               >
-                {tech}
-              </span>
+                <div
+                  className="text-[1.5rem] font-bold leading-none mb-1"
+                  style={{ color: 'var(--accent-light)' }}
+                >
+                  {m.value}
+                </div>
+                <div className="text-[0.6875rem] text-[var(--text-muted)] leading-snug">
+                  {m.label}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Metric pair */}
-        <div className="flex sm:flex-col gap-3 sm:min-w-[140px]">
-          {project.metrics.map((m) => (
-            <div
-              key={m.label}
-              className="flex-1 sm:flex-none glass rounded-[14px] px-4 py-3 text-center"
-            >
-              <div
-                className="text-[1.5rem] font-bold leading-none mb-1"
-                style={{ color: 'var(--accent-light)' }}
-              >
-                {m.value}
-              </div>
-              <div className="text-[0.6875rem] text-[var(--text-muted)] leading-snug">
-                {m.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+        {/* Moving glare that follows the tilt */}
+        <motion.div
+          className="absolute inset-0 rounded-[22px] pointer-events-none"
+          style={{ opacity: glareOpacity, background: glareBg }}
+          aria-hidden="true"
+        />
+      </motion.div>
     </motion.div>
   )
 }
